@@ -1,6 +1,7 @@
+import classes from'./Profile.module.css';
 const Profile = () => {
     return(
-        <div className = 'Content'>
+        <div className = {classes.content}>
         <div>
           <img src = 'https://pbs.twimg.com/profile_banners/1173848757470785536/1569306015/1500x500'></img>
         </div>
@@ -13,13 +14,13 @@ const Profile = () => {
               new post
             </div>
             <div>
-              <div>
+              <div className ={classes.item}>
                 post 1
               </div>
-              <div>
+              <div className ={classes.item}>
                 post 2
               </div>
-              <div>
+              <div className ={classes.item}>
                 post 3
               </div>
             </div>

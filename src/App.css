@@ -1,5 +1,4 @@
 
-
 .app-wrapper{
   margin: 0 auto;
   display: grid;
@@ -11,28 +10,4 @@
   grid-template-columns: 2fr 10fr;
   grid-gap:10px;
   background-color: rgb(151, 151, 151);
-}
-
-.header{
-  grid-area: h;
-  background-color: rgb(133, 187, 187);
-}
-
-.header img{
-  width: 60px;
-  height: 60px;
-}
-
-.nav{
-  grid-area: n;
-  background-color: rgb(133, 187, 187);
-  
-}
-
-.Content{
-  grid-area: c;
-  background-color: rgb(179, 136, 196);
-}
-.Content img{
-  width: 100%;
 }

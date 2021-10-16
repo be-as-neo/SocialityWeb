@@ -1,24 +1,32 @@
+import s from './Navbar.module.css';
+
+// let classNav = {
+//   'nav' : '.Navbar_nav__3DPEw',
+//   'item' : 'Navbar_item__2t-MH'
+// }
+
 const Navbar = () => {
     return(
-        <nav className = 'nav'>
-        <div className>
-          <a href = 's'>Profile</a>
+        <nav className = {s.nav}>
+        <div>
+          <a href = 's'  className = {s.item}>Profile</a>
         </div>
         <div>
-          <a href = 's'>Messages</a>
+          <a href = 's' class= {s.item}>Messages</a>
         </div>
         <div>
-          <a href = 's'>News</a>
+          <a href = 's'  className = {s.item}>News</a>
         </div>
         <div>
-          <a href = 's'>Music</a>
+          <a href = 's'  className = {s.item}>Music</a>
         </div>
         <div>
-          <a href = 's'>Settings</a>
+          <a href = 's'  className = {s.item}>Videos</a>
         </div>
         <div>
-          <a href = 's'>Videos</a>
+          <a href = 's'  className = {s.item}>Settings</a>
         </div>
+
       </nav>
     )
 }
