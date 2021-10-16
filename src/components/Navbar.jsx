@@ -16,6 +16,9 @@ const Navbar = () => {
         <div>
           <a href = 's'>Settings</a>
         </div>
+        <div>
+          <a href = 's'>Videos</a>
+        </div>
       </nav>
     )
 }
