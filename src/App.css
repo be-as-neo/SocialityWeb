@@ -10,11 +10,12 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap:10px;
+  background-color: rgb(151, 151, 151);
 }
 
 .header{
   grid-area: h;
-  background-color: aqua;
+  background-color: rgb(133, 187, 187);
 }
 
 .header img{
@@ -24,12 +25,13 @@
 
 .nav{
   grid-area: n;
-  background-color: blueviolet;
+  background-color: rgb(133, 187, 187);
+  
 }
 
 .Content{
   grid-area: c;
-  background-color: chartreuse;
+  background-color: rgb(179, 136, 196);
 }
 .Content img{
   width: 100%;

@@ -1,7 +1,7 @@
 const Navbar = () => {
     return(
         <nav className = 'nav'>
-        <div>
+        <div className>
           <a href = 's'>Profile</a>
         </div>
         <div>
