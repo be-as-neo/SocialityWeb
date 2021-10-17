@@ -1,11 +1,13 @@
 import s from './Post.module.css';
-const Post = () => {
+const Post = (props) => {
   return (
     <div className={s.item}>
-      <img src='https://www.ejin.ru/wp-content/uploads/2018/10/1202399791_preview_15034743_1798112143788452_7709561090543190016_n.jpg' />
-      post 1
+      {/* <img src='https://www.ejin.ru/wp-content/uploads/2018/10/1202399791_preview_15034743_1798112143788452_7709561090543190016_n.jpg' /> */}
+      <img src = {props.img} />
+      {props.messege}
       <div>
-        <span>Like</span> 
+        <span>Like: </span> 
+        {props.like}
       </div>
     </div>
   )

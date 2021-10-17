@@ -4,7 +4,7 @@ const Profile = () => {
   return (
     <div className={classes.content}>
       <div>
-        <img src='https://pbs.twimg.com/profile_banners/1173848757470785536/1569306015/1500x500'></img>
+        <img src='https://images.wallpaperscraft.ru/image/single/zdaniia_arhitektura_chb_160924_2560x1024.jpg'></img>
       </div>
       <div>
         ava

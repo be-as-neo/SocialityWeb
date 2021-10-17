@@ -1,5 +1,6 @@
 
 .app-wrapper{
+  font-family:Arial, Helvetica, sans-serif;
   margin: 0 auto;
   display: grid;
   width: 1200px;
@@ -9,5 +10,5 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap:10px;
-  background-color: rgb(151, 151, 151);
+  background-color: rgb(48, 48, 48);
 }
