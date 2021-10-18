@@ -2,18 +2,20 @@
 .nav{
   grid-area: n;
   background-color: rgb(133, 187, 187);
-  height: 40%;
+  height: 240px;
   padding-top: 10%;
 }
 
-.item{
+.item a{
   display: flex;
   justify-content: center;
-  font-size: 130%;
+  font-size: 120%;
   padding: 5px;
   margin: 3px;
-  color: white;
   background-color: rgb(48, 48, 48);
-  color: rgb(146, 146, 146);
-  grid-column-gap: 10px;
+  color: rgb(131, 131, 131);
+}
+
+.item a.activeLink{
+  color: rgb(255, 255, 255);
 }
