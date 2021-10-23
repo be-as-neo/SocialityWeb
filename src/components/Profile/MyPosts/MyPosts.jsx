@@ -1,5 +1,12 @@
 import s from './MyPosts.module.css'
 import Post from './Post/Post';
+
+let postData = [
+  {id: 1, message: 'Love you!!!', likesCount: 16 },
+  {id: 2, message: 'You my best friend!', likesCount: 17},
+  {id: 3, message: 'Hello, how are you?', likesCount: 87 },
+]
+
 const MyPosts = () => {
   return (
     <div className = {s.MyPosts}>
@@ -13,9 +20,9 @@ const MyPosts = () => {
         </div> 
       </div>
     <div className={s.posts}>
-      <Post messege = 'Love you!!!' like =' 16 ♥' img = {'https://www.ejin.ru/wp-content/uploads/2018/10/1202399791_preview_15034743_1798112143788452_7709561090543190016_n.jpg'}/>
-      <Post messege = 'Hello, how are you?' like =' 17 ♥' img = {'https://www.meme-arsenal.com/memes/8c39f83458ca87b0b75cea622c6b096d.jpg'}/>
-      <Post messege = 'You my best friend!' like =' 21 ♥' img = {'https://pbs.twimg.com/media/Ec-8rDTWkAErmuh.jpg'}/>
+      <Post messege = {postData[0].message} like = {postData[0].likesCount} img = {'https://www.ejin.ru/wp-content/uploads/2018/10/1202399791_preview_15034743_1798112143788452_7709561090543190016_n.jpg'}/>
+      <Post messege = {postData[1].message} like = {postData[1].likesCount} img = {'https://www.meme-arsenal.com/memes/8c39f83458ca87b0b75cea622c6b096d.jpg'}/>
+      <Post messege = {postData[2].message} like = {postData[2].likesCount} img = {'https://pbs.twimg.com/media/Ec-8rDTWkAErmuh.jpg'}/>
     </div>
     </div>
   )
