@@ -1,29 +1,35 @@
 import { NavLink } from 'react-router-dom'
 import s from'./Dialogs.module.css'
+
+const DialogItem = (props) =>{
+    return(
+        <div className = {s.dialog + ' ' + s.active}>
+        <NavLink to = {"/dialogs/" + props.id} activeClassName = {s.activeLink}>{props.name}</NavLink>
+     </div>
+    )
+}
+
+const Messege = (props) => {
+    return(
+    <div className={s.messege}>{props.message}</div>
+    )
+}
 const Dialogs = () => {
     return (
         <div className ={s.dialogs}>
             <div className = {s.dialogsItems}>
-                <div className = {s.dialog + ' ' + s.active}>
-                   <NavLink to = "/dialogs/1" activeClassName={s.activeLink}>Ivan</NavLink>
-                </div>
-                <div className = {s.dialog}>
-                    <NavLink to = "/dialogs/2" activeClassName={s.activeLink}>Ekaterina</NavLink>
-                </div>
-                <div className = {s.dialog}>
-                    <NavLink to = "/dialogs/3" activeClassName={s.activeLink}> Denis</NavLink>
-                </div>
-                <div className = {s.dialog}>
-                    <NavLink to = "/dialogs/4" activeClassName={s.activeLink}>Oleg</NavLink>
-                </div>
-                <div className = {s.dialog}>
-                    <NavLink to = "/dialogs/5" activeClassName={s.activeLink}>  Misha</NavLink>
-                </div>
+                <DialogItem name = "Ivan" id = "1"/>
+                <DialogItem name = "Ekaterina" id = "2"/>
+                <DialogItem name = "Danil" id = "3"/>
+                <DialogItem name = "Oleg" id = "4"/>
+                <DialogItem name = "Misha" id = "5"/>
             </div>
             <div className = {s.messages}>
-                    <div className={s.messege}>hi</div>
-                    <div className={s.message}>How is youre </div>
-                    <div className={s.message}>yo</div>
+                <Messege message = "hi"/>
+                <Messege message = "is"/>
+                <Messege message = "yo"/>
+                <Messege message = "My Name is"/>
+                <Messege message = "Hello"/>
             </div>
         </div>
     )

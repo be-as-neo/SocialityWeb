@@ -1,14 +1,11 @@
 import s from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
+
 const Profile = () => {
   return (
-    <div className = {s.content}>
-      <div className = {s.img}>
-        <img src='https://images.wallpaperscraft.ru/image/single/zdaniia_arhitektura_chb_160924_2560x1024.jpg'></img>
-      </div>
-      <div>
-        ava
-      </div>
+    <div className={s.content}>
+      <ProfileInfo />
       <MyPosts />
     </div>
 

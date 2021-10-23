@@ -1,3 +1,8 @@
 .posts{
   background-color: rgb(48, 48, 48);
+  padding: 10px;
+}
+
+.MyPosts{
+  padding: 10px;
 }

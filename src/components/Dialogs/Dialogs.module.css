@@ -9,17 +9,19 @@
 .dialogsItems .active{
 
 }
-.dialog{
-    color: rgb(131, 131, 131);
+.dialog a{
+    font-size: 23px;
+    color: rgb(39, 39, 39);
+    text-decoration:none;
 }
 
 .dialog a.activeLink {
     color: black;
     background-color: white;
-
 }
 .messages{
     padding: 10px;
+    font-size: 23px;
 }
 
 .messages .message{
