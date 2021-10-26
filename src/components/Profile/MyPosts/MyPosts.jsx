@@ -1,19 +1,18 @@
 import s from './MyPosts.module.css'
 import Post from './Post/Post';
+import Profile from '../Profile';
 
 
 
-const MyPosts = () => {
-  
-  let postData = [
-    {id: 1, message: 'Love you!!!', likesCount: 16},
-    {id: 2, message: 'You my best friend!', likesCount: 17},
-    {id: 3, message: 'Hello, how are you?', likesCount: 87}
-  ]
-  
+const MyPosts = (props) => {
+  // let postData = [
+  //   {id: 1, message: 'Love you!!!', likesCount: 16},
+  //   {id: 2, message: 'You my best friend!', likesCount: 17},
+  //   {id: 3, message: 'Hello, how are you?', likesCount: 87}
+  // ]
+
   let postElements = 
-    postData.map( p => <Post messege = {p.message} likesCount = {p.likesCount}/>);
-
+    props.postData.map( p => <Post messege = {p.message} likesCount = {p.likesCount}/>);
   return (
     <div className = {s.MyPosts}>
       <h3>My Posts</h3>

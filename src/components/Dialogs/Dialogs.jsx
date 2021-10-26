@@ -4,27 +4,27 @@ import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
 
 
-const Dialogs = () => {
+const Dialogs = (props) => {
 
-let dialogsData = [
-    {id: 1, name: 'Ivan'},
-    {id: 2, name: 'Ekaterina'},
-    {id: 3, name: 'Danil'},
-    {id: 4, name: 'Vitalya'},
-    {id: 5, name: 'Misha'},
-]
+// let dialogsData = [
+//     {id: 1, name: 'Ivan'},
+//     {id: 2, name: 'Ekaterina'},
+//     {id: 3, name: 'Danil'},
+//     {id: 4, name: 'Vitalya'},
+//     {id: 5, name: 'Misha'},
+// ]
 
-let messagesData = [
-    {id: 1, message: 'hi'},
-    {id: 2, message: 'is'},
-    {id: 3, message: 'yo'},
-    {id: 4, message: 'name'},
-    {id: 5, message: 'Hi'}
-]
+// let messagesData = [
+//     {id: 1, message: 'hi'},
+//     {id: 2, message: 'is'},
+//     {id: 3, message: 'yo'},
+//     {id: 4, message: 'name'},
+//     {id: 5, message: 'Hi'}
+// ]
 
-let dialogsElements = dialogsData.map( dialog => <DialogItem name = {dialog.name} id = {dialog.id}/>);
+let dialogsElements = props.dialogsData.map( dialog => <DialogItem name = {dialog.name} id = {dialog.id}/>);
 
-let messagesElements = messagesData.map( m => <Message message = {m.message} id = {m.id}/>);
+let messagesElements = props.messagesData.map( m => <Message message = {m.message} id = {m.id}/>);
 
 
     return (
