@@ -1,12 +1,16 @@
 import { Link, NavLink } from 'react-router-dom';
 import s from './Navbar.module.css';
+import SideBar from './Sidebar/Sidebar';
 
 // let classNav = {
 //   'nav' : '.Navbar_nav__3DPEw',
 //   'item' : 'Navbar_item__2t-MH'
 // }
 
-const Navbar = () => {
+const Navbar = (props) => {
+    // let friendElements =
+    //   props.sideBarData.map( p => {})
+
     return(
         <nav className = {s.nav}>
         <div  className = {s.item}>
@@ -26,6 +30,12 @@ const Navbar = () => {
         </div>
         <div className = {s.item}>
           <NavLink to = '/settings ' activeClassName={s.activeLink}>Settings</NavLink>
+        </div>
+        <div className = {s.friendsTitle}>
+          Frineds
+        </div>
+        <div>
+            <SideBar />
         </div>
 
       </nav>
