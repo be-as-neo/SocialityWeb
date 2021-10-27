@@ -27,4 +27,26 @@
 .messages .message{
 
 }
+.textAreaSittings textarea{
+    resize: none;
+    color: rgb(39, 39, 39);
+    background-color: rgb(153, 153, 153);
+    border: 0px;
+    width: 100%;
+    max-height: 90px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.textAreaSittings button{
+    background-color: rgb(153, 153, 153);
+    color: rgb(39, 39, 39);
+    border: 0px;
+    max-width: 50px;
+    max-height: 90px;
+
+}
+
+.textAreaSittings {
+    display: flex;
+}
 

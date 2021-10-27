@@ -27,23 +27,35 @@
   font-size: 120%;
   padding: 5px;
   margin: 3px;
-  margin-top: 30px;
   color: rgb(63, 62, 62);
   font-weight: bold;
+  border: solid 1px;
+  background-color: rgb(151, 151, 151);
 }
+
+.friendsContainerMain{
+  border: solid 2px rgb(134, 134, 134);
+  background-color: rgb(48, 48, 48);
+  padding: 2px;
+}
+
+
 .friendsContainer{
   display: flex;
-  border: solid;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .friendsContainer img{
-  width: 50px;
-  padding: 5px;
-  height: 50px;
   border-radius: 100px;
+  padding: 3px ;
+  width: 52px;
+  height: 52px;
 }
 
 .friendsName{
-  border: solid;
+  display: flex;
+  justify-content:space-around;
+  color:rgb(131, 131, 131);
+  font-size: 70%;
 }
+

@@ -1,6 +1,7 @@
 import s from './MyPosts.module.css'
 import Post from './Post/Post';
 import Profile from '../Profile';
+import React from 'react';
 
 
 
@@ -13,15 +14,24 @@ const MyPosts = (props) => {
 
   let postElements = 
     props.postData.map( p => <Post messege = {p.message} likesCount = {p.likesCount}/>);
+  
+  let newPostElement = React.createRef();
+
+  let addPost = () =>{
+    debugger;
+    let text = newPostElement.current.value;
+    props.addPost(text)
+  }
+
   return (
     <div className = {s.MyPosts}>
       <h3>My Posts</h3>
       <div>
         <div>
-          <textarea></textarea>
+          <textarea  ref = {newPostElement} ></textarea>
         </div>
         <div>
-        <button>Add Post</button>
+        <button onClick = {addPost}>Add Post</button>
         </div> 
       </div>
     <div className={s.posts}>

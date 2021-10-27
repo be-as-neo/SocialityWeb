@@ -15,6 +15,7 @@ let state = {
             {id: 3, message: 'yo'},
             {id: 4, message: 'name'},
             {id: 5, message: 'Hi'},
+            {id: 6, message: 'How are you?'},
         ],
         dialogsData:[    
             {id: 1, name: 'Ivan'},
@@ -22,15 +23,26 @@ let state = {
             {id: 3, name: 'Danil'},
             {id: 4, name: 'Vitalya'},
             {id: 5, name: 'Misha'},
+            {id: 6, name: 'Oleg'},
         ],
-        },
+},
+
     sideBarPage:{
         sideBarData: [
-            {name: 'Ivan'},
-            {name: 'Ekaterina'},
-            {name: 'Danil'}
+            {id: 1, name: 'Ivan'},
+            {id: 2, name: 'Ekaterina'},
+            {id: 3, name: 'Danil'}
         ]
     }
 }
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 7,
+        message: postMessage,
+        likesCount: 0
+    }
 
+    state.profilePage.postData.push(newPost);
+
+}
 export default state

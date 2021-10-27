@@ -7,15 +7,13 @@ import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/Navbar/News/News';
 import Music from './components/Navbar/Music/Music';
 import { Route } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { addPost } from './redux/state';
 
 
+ function App(props) {
 
-
-
-function App(props) {
   return (
-    <BrowserRouter>
+
       <div className='app-wrapper'>
         <Header />
         <Navbar state = {props.state.sideBarPage}/>
@@ -23,15 +21,15 @@ function App(props) {
           {/* <Route path='/profile' component = {Profile}/>
           <Route path='/dialogs' component = {Dialogs}/> */}
           <Route path='/dialogs' render = { () => <Dialogs 
-              state = {props.state.profilePage} 
-              state = {props.state.messagesPage} /> }/>
+                state = {props.state.profilePage} 
+                state = {props.state.messagesPage} /> }/>
           <Route path='/profile' render = { () => <Profile 
-              state = {props.state.profilePage} /> } />
+              state = {props.state.profilePage} 
+              addPost = {props.addPost}/> } />
           <Route path='/news' component = {News}/>
           <Route path ='/music' component = {Music}/>
         </div>
       </div>
-    </BrowserRouter>
   );
 }
 
