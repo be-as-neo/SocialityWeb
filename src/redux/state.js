@@ -23,12 +23,13 @@ let state = {
             {id: 4, name: 'Vitalya'},
             {id: 5, name: 'Misha'},
         ],
-        },
+},
+
     sideBarPage:{
         sideBarData: [
-            {name: 'Ivan'},
-            {name: 'Ekaterina'},
-            {name: 'Danil'}
+            {id: 1, name: 'Ivan'},
+            {id: 2, name: 'Ekaterina'},
+            {id: 3, name: 'Danil'}
         ]
     }
 }

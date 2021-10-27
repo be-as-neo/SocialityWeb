@@ -8,9 +8,11 @@ import SideBar from './Sidebar/Sidebar';
 // }
 
 const Navbar = (props) => {
-    // let friendElements =
-    //   props.sideBarData.map( p => {})
-
+  // let sideBarData = [
+  //   {name: 'Ivan'},
+  //   {name: 'Ekaterina'},
+  //   {name: 'Danil'}
+  // ];
     return(
         <nav className = {s.nav}>
         <div  className = {s.item}>
@@ -31,11 +33,13 @@ const Navbar = (props) => {
         <div className = {s.item}>
           <NavLink to = '/settings ' activeClassName={s.activeLink}>Settings</NavLink>
         </div>
-        <div className = {s.friendsTitle}>
+        <div className = {s.friendsContainerMain}>
+          <div className = {s.friendsTitle}>
           Frineds
-        </div>
-        <div>
-            <SideBar />
+          </div>
+          <div>
+            <SideBar/>
+          </div>
         </div>
 
       </nav>
