@@ -21,11 +21,14 @@ import { addPost } from './redux/state';
           {/* <Route path='/profile' component = {Profile}/>
           <Route path='/dialogs' component = {Dialogs}/> */}
           <Route path='/dialogs' render = { () => <Dialogs 
-                state = {props.state.profilePage} 
+                state = {props.state.profilePage}
+                addNewMessage = {props.addNewMessage}
+                updateNewMessage = {props.updateNewMessage}
                 state = {props.state.messagesPage} /> }/>
           <Route path='/profile' render = { () => <Profile 
-              state = {props.state.profilePage} 
-              addPost = {props.addPost}/> } />
+              profilePage = {props.state.profilePage} 
+              addPost = {props.addPost}
+              updateNewPostText = {props.updateNewPostText}/> } />
           <Route path='/news' component = {News}/>
           <Route path ='/music' component = {Music}/>
         </div>
