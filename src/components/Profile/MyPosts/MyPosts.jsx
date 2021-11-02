@@ -13,7 +13,7 @@ const MyPosts = (props) => {
   // ]
 
   let postElements = 
-    props.postData.map( p => <Post messege = {p.message} likesCount = {p.likesCount}/>);
+    props.postData.map( p => <Post messege = {p.message} likesCount = {p.likesCount} avatar = {p.avatar}/>);
   
   let newPostElement = React.createRef();
 

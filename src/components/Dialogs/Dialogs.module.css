@@ -22,6 +22,7 @@
 .messages{
     padding: 10px;
     font-size: 23px;
+    position: relative;
 }
 
 .messages .message{
@@ -43,10 +44,12 @@
     border: 0px;
     max-width: 50px;
     max-height: 90px;
-
 }
 
 .textAreaSittings {
     display: flex;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
