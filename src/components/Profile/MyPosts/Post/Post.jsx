@@ -1,8 +1,11 @@
 import s from './Post.module.css';
+import React from 'react';
+
 const Post = (props) => {
+  const avatar = props?.avatar || 'https://miro.medium.com/max/888/1*4ZoawGypeCluNqiC5Z_rhA.png'
   return (
     <div className={s.item}>
-      <img src='https://www.ejin.ru/wp-content/uploads/2018/10/1202399791_preview_15034743_1798112143788452_7709561090543190016_n.jpg' /> 
+      <img src={avatar} /> 
       {props.messege}
       <div>
         <span>Like: </span> 

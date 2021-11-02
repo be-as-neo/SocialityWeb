@@ -1,10 +1,12 @@
-import {rerenderEntireTree} from './../render';
+let rerenderEntireTree = () =>{
+    console.log('state chenge')
+}
 let state = {
     profilePage:{
         postData:[ 
             {id: 1, message: 'Love you!!!', likesCount: 16},
             {id: 2, message: 'You my best friend!', likesCount: 17},
-            {id: 3, message: 'Hello, how are you?', likesCount: 87},
+            {id: 3, message: 'Hello, how are you?', likesCount: 87, avatar:'https://www.ejin.ru/wp-content/uploads/2018/10/1202399791_preview_15034743_1798112143788452_7709561090543190016_n.jpg'},
         ],
         newPostText: ''
 },
@@ -37,7 +39,7 @@ let state = {
         ]
     }
 }
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 7,
         message: state.profilePage.newPostText,
@@ -47,14 +49,18 @@ export let addPost = () => {
     state.profilePage.postData.push(newPost);
     state.profilePage.newPostText = '';
     rerenderEntireTree(state);
-}
+} 
 
-export let updateNewPostText = (newText) => {
-    state.profilePage.newPostText = newText;
+export const updateNewPostText = (newText) => {
+    state['profilePage']['newPostText'] = newText;
     rerenderEntireTree(state);
 }
 
-export let addNewMessage = () =>{
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer
+}
+
+export const addNewMessage = () =>{
     let newMessage = {
         id: 7,
         message: state.messagesPage.newMessage
@@ -63,8 +69,9 @@ export let addNewMessage = () =>{
     state.messagesPage.newMessage = '';
     rerenderEntireTree(state)
 }
-export let updateNewMessage = (newMessageText) => {
+export const updateNewMessage = (newMessageText) => {
     state.messagesPage.newMessage = newMessageText;
-    rerenderEntireTree(state) 
+    rerenderEntireTree(state)
 }
 export default state
+
