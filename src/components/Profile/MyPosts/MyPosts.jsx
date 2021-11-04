@@ -6,11 +6,6 @@ import React from 'react';
 
 
 const MyPosts = (props) => {
-  // let postData = [
-  //   {id: 1, message: 'Love you!!!', likesCount: 16},
-  //   {id: 2, message: 'You my best friend!', likesCount: 17},
-  //   {id: 3, message: 'Hello, how are you?', likesCount: 87}
-  // ]
 
   let postElements = 
     props.postData.map( p => <Post messege = {p.message} likesCount = {p.likesCount} avatar = {p.avatar}/>);
@@ -18,12 +13,13 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () =>{
-    props.addPost()
+    props.dispatch({ type: 'ADD-POST' })
   }
 
   let onPostChange = () =>{
     let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+    let action = { type: 'UPDATE-NEW-POST-TEXT', newText : text };
+    props.dispatch(action)
   }
 
   return (
@@ -39,9 +35,6 @@ const MyPosts = (props) => {
       </div>
     <div className={s.posts}>
       {postElements}
-      {/* <Post messege = {postData[0].message} like = {postData[0].likesCount} />
-      <Post messege = {postData[1].message} like = {postData[1].likesCount} />
-      <Post messege = {postData[2].message} like = {postData[2].likesCount} /> */}
     </div>
     </div>
   )
