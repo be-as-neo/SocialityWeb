@@ -27,8 +27,7 @@ import { addPost } from './redux/state';
                 state = {props.state.messagesPage} /> }/>
           <Route path='/profile' render = { () => <Profile 
               profilePage = {props.state.profilePage} 
-              addPost = {props.addPost}
-              updateNewPostText = {props.updateNewPostText}/> } />
+              dispatch = {props.dispatch} /> } />
           <Route path='/news' component = {News}/>
           <Route path ='/music' component = {Music}/>
         </div>
