@@ -21,10 +21,10 @@ import { addPost } from './redux/state';
           {/* <Route path='/profile' component = {Profile}/>
           <Route path='/dialogs' component = {Dialogs}/> */}
           <Route path='/dialogs' render = { () => <Dialogs 
-                state = {props.state.profilePage}
                 addNewMessage = {props.addNewMessage}
                 updateNewMessage = {props.updateNewMessage}
-                state = {props.state.messagesPage} /> }/>
+                state = {props.state.messagesPage} 
+                store = {props.store}/> }/>
           <Route path='/profile' render = { () => <Profile 
               profilePage = {props.state.profilePage} 
               dispatch = {props.dispatch} /> } />
