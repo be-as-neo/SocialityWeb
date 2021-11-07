@@ -12,8 +12,9 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
     <App state = {state} dispatch = {store.dispatch.bind(store)} 
-        addNewMessage = {store.addNewMessage.bind(store)} 
-        updateNewMessage = {store.updateNewMessage.bind(store)}/>
+        // addNewMessage = {store.addNewMessage.bind(store)} 
+        // updateNewMessage = {store.updateNewMessage.bind(store)}
+        store = {store}/>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
