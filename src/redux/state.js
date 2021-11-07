@@ -1,5 +1,6 @@
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY'
-const SEND_MESSAGE = 'SEND_MESSAGE'
+import profileReducer from './progileReducer'
+import dialogsReducer from './dialogsReducer'
+import sideBarReducer from './sideBarReducer'
 
 let store = {
     _state:{
@@ -52,61 +53,38 @@ let store = {
         this._callSubscriber = observer
     },
 
-    // addNewMessage(){
-    //     let newMessage = {
-    //         id: 7,
-    //         message: this._state.messagesPage.newMessage
-    //     }
-    //     this._state.messagesPage.messagesData.push(newMessage);
-    //     this._state.messagesPage.newMessage = '';
-    //     this._callSubscriber(this._state)
-    // },// Добавление сообщения во влкдаке сообщения
-    // updateNewMessage(newMessageText){
-    //     this._state.messagesPage.newMessage = newMessageText;
-    //     this._callSubscriber(this._state)
-    // },
+    dispatch(action){ 
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+        this._state.messagesPage = dialogsReducer(this._state.messagesPage, action)
+        this._state.sideBarPage = sideBarReducer(this._state.sideBarPage, action)
 
-    dispatch(action){ // { type: 'ADD-POST'  }
-        if (action.type === 'ADD-POST'){//Добавление поста на стену в профиле
-            let newPost = {
-                id: 7,
-                message: this._state.profilePage.newPostText,
-                likesCount: 0
-            }
-            this._state.profilePage.postData.push(newPost);
-            this._state.profilePage.newPostText = '';
-            this._callSubscriber(this._state);
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT'){
-            this._state['profilePage']['newPostText'] = action.newText;
-            this._callSubscriber(this._state);
-        } else if (action.type === UPDATE_NEW_MESSAGE_BODY){
-            this._state.messagesPage.newMessageBody = action.body;
-            this._callSubscriber(this._state);
-        } else if (action.type === SEND_MESSAGE){
-            let body = this._state.messagesPage.newMessageBody;
-            this._state.messagesPage.newMessageBody = '';
-            this._state.messagesPage.messagesData.push({id:7, message: body});
-            this._callSubscriber(this._state);
-        }
+        this._callSubscriber(this._state)
+        // { type: 'ADD-POST'  }
+        // if (action.type === 'ADD-POST'){//Добавление поста на стену в профиле
+        //     let newPost = {
+        //         id: 7,
+        //         message: this._state.profilePage.newPostText,
+        //         likesCount: 0
+        //     }
+        //     this._state.profilePage.postData.push(newPost);
+        //     this._state.profilePage.newPostText = '';
+        //     this._callSubscriber(this._state);
+        // } else if (action.type === 'UPDATE-NEW-POST-TEXT'){
+        //     this._state['profilePage']['newPostText'] = action.newText;
+        //     this._callSubscriber(this._state);
+        // } else if (action.type === UPDATE_NEW_MESSAGE_BODY){
+        //     this._state.messagesPage.newMessageBody = action.body;
+        //     this._callSubscriber(this._state);
+        // } else if (action.type === SEND_MESSAGE){
+        //     let body = this._state.messagesPage.newMessageBody;
+        //     this._state.messagesPage.newMessageBody = '';
+        //     this._state.messagesPage.messagesData.push({id:7, message: body});
+        //     this._callSubscriber(this._state);
+        // }
     }
 }
 
-export const sendMessageCreator = () => ({type:SEND_MESSAGE})
 
-export const updateNewMessageBodyCreator = (body) => 
-    ({type: UPDATE_NEW_MESSAGE_BODY, body:body})
-
-export const addPostActionCreator = () =>{
-    return{
-        type: 'ADD-POST'
-    }
-}
-  
-export const updateNewPostTextActionCreator = (text) =>{
-    return{
-      type: 'UPDATE-NEW-POST-TEXT', newText : text 
-    }
-}
 
 
 window.store = store;
