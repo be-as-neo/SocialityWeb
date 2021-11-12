@@ -24,15 +24,6 @@ let onNewMessageChenge = (event) =>{
     props.store.dispatch(updateNewMessageBodyCreator(body))
 }
 
-// let addNewMessage = () => {
-//     props.addNewMessage()
-// }
-
-// let onMessageChange = () =>{
-//     let text = addMessageElements.current.value;
-//     props.updateNewMessage(text); 
-// }
-
     return (
         <div className ={s.dialogs}>
             <div className = {s.dialogsItems}>
