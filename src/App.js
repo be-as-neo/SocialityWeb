@@ -17,12 +17,13 @@ import DialogsContainer from './components/Dialogs/DialogsContainer';
 
       <div className='app-wrapper'>
         <Header />
-        <Navbar state = {props.state.sideBarPage}/>
+        <Navbar /> 
+        {/* state = {props.state.sideBarPage} Отключение SideBar */}
         <div className = 'app-wrapper-content'>
           {/* <Route path='/profile' component = {Profile}/>
           <Route path='/dialogs' component = {Dialogs}/> */}
-          <Route path='/dialogs' render = { () => <DialogsContainer  store = {props.store}/> }/>
-          <Route path='/profile' render = { () => <Profile store = {props.store} /> } />
+          <Route path='/dialogs' render = { () => <DialogsContainer/> }/>
+          <Route path='/profile' render = { () => <Profile/> } />
           <Route path='/news' component = {News}/>
           <Route path ='/music' component = {Music}/>
         </div>
