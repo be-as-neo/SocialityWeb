@@ -38,7 +38,7 @@ const Navbar = (props) => {
           Frineds
           </div>
           <div>
-            <SideBar/>
+            {/* <SideBar/> Выключил SideBar */}
           </div>
         </div>
 

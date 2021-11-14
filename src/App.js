@@ -8,6 +8,7 @@ import News from './components/Navbar/News/News';
 import Music from './components/Navbar/Music/Music';
 import { Route } from 'react-router';
 import { addPost } from './redux/state';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 
 
  function App(props) {
@@ -16,18 +17,13 @@ import { addPost } from './redux/state';
 
       <div className='app-wrapper'>
         <Header />
-        <Navbar state = {props.state.sideBarPage}/>
+        <Navbar /> 
+        {/* state = {props.state.sideBarPage} Отключение SideBar */}
         <div className = 'app-wrapper-content'>
           {/* <Route path='/profile' component = {Profile}/>
           <Route path='/dialogs' component = {Dialogs}/> */}
-          <Route path='/dialogs' render = { () => <Dialogs 
-                addNewMessage = {props.addNewMessage}
-                updateNewMessage = {props.updateNewMessage}
-                state = {props.state.messagesPage} 
-                store = {props.store}/> }/>
-          <Route path='/profile' render = { () => <Profile 
-              profilePage = {props.state.profilePage} 
-              dispatch = {props.dispatch} /> } />
+          <Route path='/dialogs' render = { () => <DialogsContainer/> }/>
+          <Route path='/profile' render = { () => <Profile/> } />
           <Route path='/news' component = {News}/>
           <Route path ='/music' component = {Music}/>
         </div>
